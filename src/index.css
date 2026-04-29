@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-brand-gold: #C5A059;
+  --color-brand-dark: #121212;
+  --color-brand-light: #F8F8F8;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-brand-dark)] text-[var(--color-brand-light)] font-sans antialiased;
+  }
+}
+
+.architectural-grid {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
